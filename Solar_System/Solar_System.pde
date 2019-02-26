@@ -5,6 +5,7 @@ Spaceship ship;
 
 PImage bg, tato, ald, ht, dg, end, starImg, ds, fm, mft;
 float xShip, yShip, zShip;
+boolean cam;
 PFont font;
 PShape mf;
 
@@ -28,7 +29,9 @@ void setup(){
   xShip = -3000;
   yShip = -4500;
   zShip = 0;
- 
+  
+  cam = false;
+  
   star = new Star(100, 5, 0, 0.25, new PVector(width/2, height/2, -550), starImg);
   deathStar = new Moon(15, 1.6, 0, 0.02, new PVector(55, 0, 1), ds);
   endorMoon = new Moon(15, 1.6, 0, 0.02, new PVector(55, 0, 1), fm);
@@ -70,12 +73,23 @@ void draw(){
   ship.display();
   
   instructions();
+  
+  if(!cam){
+    ship.thirdPersonCamera();
+  }else{
+    ship.firstPersonCamera();
+  }
 }
 
 void instructions(){
   textFont(font, 28);
-  text("To pilot Millennium Falcon", -1050, 560, 0);
-  text("Press A-D to move RIGHT/LEFT", -1050, 600, 0);
-  text("Press W-S to move UP/DOWN", -1050, 640, 0);
-  text("Press K-L to move FORWARD/BACKWARD", -1050, 680, 0);
+  text("To pilot Millennium Falcon", -1050, 520, 0);
+  text("Press A-D to move RIGHT/LEFT", -1050, 560, 0);
+  text("Press W-S to move UP/DOWN", -1050, 600, 0);
+  text("Press K-L to move FORWARD/BACKWARD", -1050, 640, 0);
+  if(!cam){
+    text("Press P to first person view", -1050, 680, 0);
+  }else{
+    text("Press O to third person view", -1050, 680, 0);
+  }
 }

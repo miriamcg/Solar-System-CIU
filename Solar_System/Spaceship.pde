@@ -26,8 +26,19 @@ class Spaceship{
           z += 0.5;
         }else if (key == 'l'){
           z -= 0.5;
+        }else if (key == 'p'){
+          cam = true;
+        } else if (key == 'o'){
+          cam = false;
         }
       }
+    }
+    
+    
+    void thirdPersonCamera(){
+    }
+
+    void firstPersonCamera(){
     }
     
     void display(){
