@@ -5,5 +5,7 @@ Sistema planetario basado en los planetas y lunas más importantes de la saga de
 - Para mover hacia arriba/abajo apretar tecla W/S.
 - Para mover hacia izquierda/derecha apretar tecla A/D.
 - Para mover hacia delante/atrás apretar tecla K/L.
+- Para cambiar la cámara en primera persona apretar P.
+- Para cambiar la cámara en tercera persona apretar O.
 
 ![Sistema planetario](https://github.com/miriamcg/Solar-System-CIU/blob/master/ss_gif.gif)
