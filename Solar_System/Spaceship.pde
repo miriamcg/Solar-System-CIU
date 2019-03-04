@@ -36,9 +36,11 @@ class Spaceship{
     
     
     void thirdPersonCamera(){
+      camera(width/2.0, height/2.0, (height/2.0) / tan(PI*30.0 / 180.0), width/2.0, height/2.0, 0, 0, 1, 0);
     }
 
     void firstPersonCamera(){
+      camera(x * sin(radians(z)) - 600, y - 200, z* cos(radians(z)) - 100, mouseX, mouseY, z, 0, 1, 0);
     }
     
     void display(){
